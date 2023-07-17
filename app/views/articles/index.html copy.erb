@@ -1,0 +1,30 @@
+<div class="container">
+  <h1>Articles</h1>
+  <div class="row">
+    <% @articles.each do |article| %>
+    <div class="col-md-9 article-wrapper">
+      <div class="articles-img col-md-3">
+        <% if article.photo.attached? %>
+          <%= cl_image_tag article.photo.key %>
+        <% end %>
+      </div>
+      <div class="articles-body col-md-9">
+        <p>
+          <strong>Title:</strong>
+          <%= article.title %>
+        </p>
+        <p>
+          <strong>Body:</strong>
+          <%= article.body %>
+        </p>
+        <p>
+          <%= link_to "Show this article", article, class: "btn-flat" %>
+        </p>
+      </div>
+    </div>
+    <% end %>
+    <div class="col-md-3 aside">
+      Menu droit
+    </div>
+  </div>
+</div>

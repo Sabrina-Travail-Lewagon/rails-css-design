@@ -1,0 +1,16 @@
+<div id="<%= dom_id article %>">
+  <p>
+    <strong>Title:</strong>
+    <%= article.title %>
+  </p>
+  <p>
+    <% if article.photo.attached? %>
+    <%= cl_image_tag article.photo.key %>
+    <% end %>
+  </p>
+  <p>
+    <strong>Body:</strong>
+    <%= article.body %>
+  </p>
+
+</div>

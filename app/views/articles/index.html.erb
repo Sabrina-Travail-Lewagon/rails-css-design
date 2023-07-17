@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <% @articles.each do |article| %>
+      <div class="articles">
+        <div class="col-3 articles-photo">
+        <%= cl_image_tag article.photo.key %>
+        </div>
+        <div class="col">
+          <div class="articles-modify">
+            <%= link_to edit_article_path(article) do %>
+              <i class="fa-solid fa-pen"></i>
+            <% end %>
+          </div>
+          <h2><%= article.title %></h2>
+          <p><%= article.body %></p>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <div class="col-md-2 ms-3 aside-right">
+      <h2>Menu</h2>
+      <ul class="aside-menu">
+        <li> <%= link_to "Ajouter un article", new_article_path %></li>
+        <li> <%= link_to "Et quia Mesopotamiae tractus omnes crebro", "#" %></li>
+        <li><%= link_to "Dum haec in oriente aguntur, Arelate hiemem agens", "#" %> </li>
+        <li><%= link_to "Quibus occurrere bene pertinax miles explicatis", "#" %></li>
+      </ul>
+    </div>
+  </div>
+</div>

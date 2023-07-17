@@ -1,0 +1,14 @@
+# config/cloudinary.yml
+development:
+  cloud_name: dhm9blfoe
+  api_key: 391598313822423
+  api_secret: VQ_9fgxiakVaWL-ktwlLjw_HFCY
+  secure: true
+  cdn_subdomain: true
+
+production:
+  cloud_name: dhm9blfoe
+  api_key: 391598313822423
+  api_secret: VQ_9fgxiakVaWL-ktwlLjw_HFCY
+  secure: true
+  cdn_subdomain: true
